@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #1b262c;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #141010;
+    box-shadow: 0 2px 25px -12px #fdfdc4;
+    z-index: 10;
+}
+
+.header-content{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1{
+    color: #f3f3f3;
+}
+.logo h1 b{
+    color: #fdfdc4;
+}
+
+.menu {
+    height: 80px;
+    margin-right: 60px;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu nav ul li:before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #fdfdc4;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{
+    color: #fdfdc4;
+    font-size: 18px;
+    transition: color 300ms;
+}
+
+.menu nav ul li a:hover{
+    color: #ffcd38;
+
+}
+.menu nav ul li a i{
+    display: none;
+}
+
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #e3fdfd;
+    border-radius: 100%;
+    color: #00adb5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{
+    background: #eeeeee;
+    opacity: 0.8;
+}
+
+
+/*BUSCADOR DE CONTENIDO*/
+
+#ctn-icon-search{
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ctn-icon-search i{
+    font-style: 18px;
+    color: #fdfdc4;
+    cursor: pointer;
+    transition: all 350ms;
+}
+
+#ctn-icon-search i:hover{
+    color: #ffcd38;
+}
+
+#ctn-bars-search{
+    position: fixed;
+    top: -10px;
+    width: 100%;
+    background: #393e46;
+    padding: 20px;
+    z-index: 9;
+    transition: all 600ms;
+}
+
+#ctn-bars-search input{
+    display: block;
+    width: 1000px;
+    margin: auto;
+    padding: 10px;
+    font-size: 18px;
+    outline: 0;
+    border-radius: 15px;
+    border: none;
+    color: #000000;
+}
+
+#box-search{
+    position: fixed;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    background: #eeeeee;
+    z-index: 8;
+    overflow: hidden;
+    display: none;
+}
+
+#box-search li a{
+    display: block;
+    width: 1000px;
+    color: #000000;
+    padding: 12px 20px;
+}
+
+#box-search li a:hover{
+    background: #fdfdc4;
+}
+
+#box-search li a i{
+    margin-right: 10px;
+    color: #000000;
+}
+
+#cover-ctn-search{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 7;
+    display: none;
+}
+
+
+/* Botun de ir arriba*/
+
+#button-up{
+    width: 60px;
+    height: 60px;
+    background: #fdfdc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all 300ms ease;
+    transform: scale(0);
+
+}
+
+#button-up:hover{
+    transform: scale(1.1);
+    border-color: rgba(0,0,0,0.1);
+}
+
+/* COMIENZO FOTEER - PIE DE PAGINA*/
+
+.container-footer{
+    width: 100%;
+    padding: 40px;
+    background: #141010;
+    margin-top: 90px;
+}
+
+.container-footer footer{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.container-footer footer .columna1{
+    max-width: 400px;
+}
+
+.container-footer footer .columna1 h1{
+    font-size: 22px;
+    color: #fff;
+}
+
+.container-footer footer .columna1 p{
+    font-size: 14px;
+    color: #fff;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.container-footer footer .redes-footer{
+    max-width: 400px;
+
+}
+.container-footer footer .redes-footer h1{
+    font-size: 22px;
+    color: #fff;
+}
+
+.container-footer footer .redes-footer .icon-redes-footer{
+    font-size: 20px;
+    margin: 20px;
+    background: #fdfdc4;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #000;
+}
+
+footer .redes-footer .fa-twitter:hover{
+    background: #48ABED;
+    color: #FFFFFF;
+}
+
+
+footer .redes-footer .fa-instagram:hover{
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+    color: #FFFFFF;
+}
+
+.container-footer footer .columna2{
+    max-width: 400px;
+}
+.container-footer footer .columna2 h1{
+    font-size: 22px;
+    color: #fff;
+}
+.container-footer footer .columna2 .logotipo{
+    margin-top: 20px;
+    display: flex;
+}
+.container-footer footer .columna2 .logotipo img{
+    width: 36px;
+    height: 36px;
+}
+.container-footer footer .columna2 .logotipo label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+    color: #fff;
+}
+/* CIERRO FOTEER - PIE DE PAGINA*/
+
+/* COMIENZO FOTEER 2 - PIE DE PAGINA*/
+.container-footer2{
+    width: 100%;  
+    background: #323232;
+}
+
+.footer2{
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.copyright{
+    color: #FFFFFF;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.information{
+    color: #FFFFFF;
+}
+
+.information a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+/* CIERRO FOTEER 2 - PIE DE PAGINA*/
+
+/* Responsive Design - adaptable a dispositivos moviles*/
+
+@media screen and (max-width: 1220px){
+
+    .header-content{
+        max-width: 1000px;
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    #ctn-bars-search, #ctn-bars-search input, #box-search{
+        width: 100%;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 800px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .container-all{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .move-container-all{
+        transform: translateX(300px);
+    }
+
+    .menu{
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #222831;
+        overflow: hidden;
+        transform: translateX(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .show-lateral {
+        width: 300px;
+        transform: translateX(0px);
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+    }
+
+    .menu nav ul li{
+        max-width: 200px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+
+    .menu nav ul li:before{
+        right: 1px;
+        position: fixed;
+    }
+
+    .menu nav ul li a{
+        margin-top: 40px;
+        color: #e3fdfd;
+    }
+
+    .menu nav ul li a i{
+        width: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        color: #00adb5;
+    }
+
+    #icon-menu{
+        display: flex;
+        right: 60px;
+    }
+
+    .container-aside{
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    #button-up{
+        margin-bottom: 10px;
+    }
+
+}
+
+/* RESPONSIVE 900px DEL FOOTER ---> PARA ESTAR BIEN ORGANIZADO*/
+@media screen and (max-width: 1200px){
+  
+    .container-footer footer{
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .container-footer footer .columna1{
+        max-width: 100%;
+        justify-content: center;
+    }
+    .container-footer footer .columna1 h1{
+        font-size: 20px;
+    }
+    .container-footer footer .columna1 p{
+        font-size: 20px;
+    }
+    .container-footer footer .redes-footer{
+        margin-top: 20px;
+        align-items: center;
+    }
+    .container-footer footer .redes-footer h1{
+        font-size: 20px;
+    }
+    .container-footer footer .columna2{
+        margin-top: 40px;
+        justify-content: center;
+    }
+    .container-footer footer .columna2 h1{
+        font-size: 20px;
+    }
+    .container-footer footer .columna2 label{
+        font-size: 15px;
+    }
+    
+}
